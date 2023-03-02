@@ -62,3 +62,5 @@ done
 # Echo final message and close log file
 echo "Script complete."
 exec >> /dev/null
+
+echo "esiteur"

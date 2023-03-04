@@ -48,9 +48,12 @@ for file in $input_dir/*.bam; do
   filename=$(basename $temp_file .bam)
   output_path="$output_dir/$filename.bw"
   echo "output_path: $output_path"  >> $log_file
-  #nice bamCoverage --bam $temp_file -o $output_path
-  bamCoverage --version  # quickly check if deeptools is available
-  touch $output_path  # fake the output
+  
+  # For debuggign
+  # bamCoverage --version  # quickly check if deeptools is available
+  # touch $output_path  # fake the output
+
+  nice bamCoverage --bam $temp_file -o $output_path --numberOfProcessors 4
 
   echo "Deleting index file, not needed anymore"  >> $log_file
   rm $temp_file.bai

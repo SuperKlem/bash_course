@@ -1,7 +1,6 @@
 #!/bin/bash
 
 input_dir="$1"
-input_dir="/scratch/bash_course/lecture_4/bams"
 output_dir="$2"
 extension=".bam"
 
